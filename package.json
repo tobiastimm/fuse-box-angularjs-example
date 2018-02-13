@@ -1,0 +1,21 @@
+{
+  "name": "angularjs-fuse-box",
+  "version": "0.0.0",
+  "description": "AngularJS with fuse-box test project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node fuse",
+    "dist": "node fuse dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobias Timm <tbs.timm@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.9",
+    "fuse-box": "https://github.com/TobiasTimm/fuse-box.git"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.3.10"
+  }
+}

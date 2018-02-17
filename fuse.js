@@ -4,11 +4,12 @@ const {
   WebIndexPlugin,
   SVGPlugin,
   CSSPlugin,
-  QuantumPlugin,
-  NgTemplatePlugin
-} = require("fuse-box/dist");
+  QuantumPlugin
+} = require("fuse-box");
 
-const { src, task, watch, context, fuse } = require("fuse-box/dist/sparky");
+const NgTemplatePlugin = require("fuse-box-ng-template-plugin");
+
+const { src, task, watch, context, fuse } = require("fuse-box/sparky");
 
 context(
   class {
@@ -47,7 +48,7 @@ context(
       const app = fuse.bundle("app");
       if (!this.isProduction) {
         app.watch();
-        app.hmr();
+        app.hmr({ reload: true });
       }
       app.instructions("> index.js");
       return app;

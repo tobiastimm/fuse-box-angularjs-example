@@ -20,7 +20,7 @@ After the `node_modules` are installed run the development server via `npm start
 
 ## HMR
 
-y default the built-in `FuseBox` hmr does not work with AngularJS, but you see an example implementation in the [hmr.js](./src/hmr.js).
+By default the built-in `FuseBox` hmr does not work with AngularJS, but you see an example implementation in the [hmr.js](./src/hmr.js).
 
 Otherwise please force a reload within your `fuse.js`
 

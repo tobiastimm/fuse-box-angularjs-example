@@ -2,6 +2,15 @@
     <h2>{{ $ctrl.appTitle }}</h2>
     <home></home>
     <h4>ng-include references are working too!</h4>
+    <hr>
+    <h4>Counter</h4>
+    <p>
+        <label>Counter: {{ $ctrl.counter }}</label>
+        <button ng-click="$ctrl.increment()">Increment</button>
+        <button ng-click="$ctrl.decrement()">Decrement</button>
+        <label>Result multiplied by 2: {{ $ctrl.counter * 2 }}</label>
+    </p>
+
     <div ng-include="'components/Home/home.component.html'">
     </div>
 </div>

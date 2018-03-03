@@ -1,12 +1,14 @@
 import angular from "angular";
 import AppComponent from "./components/App/app.component";
-import HomeComponent from "./components/Home/home.component";
+import Home from "./components/Home/home.module";
 
-const root = angular
-  .module("fuse-box", [])
-  .component("app", AppComponent)
-  .component("home", HomeComponent);
+const root = angular.module("fuse-box", [Home]).component("app", AppComponent)
+  .name;
 
 angular.bootstrap(document.getElementById("root"), ["fuse-box"]);
+
+if (process.env.NODE_ENV === "development") {
+  require("./hmr");
+}
 
 export default root;

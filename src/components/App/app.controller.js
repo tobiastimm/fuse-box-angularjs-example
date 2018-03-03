@@ -1,6 +1,15 @@
 class AppController {
   constructor() {
-    this.appTitle = "AngularJS + fuse-box";
+    this.appTitle = "AngularJS + FuseBox";
+    this.counter = 0;
+  }
+
+  increment() {
+    this.counter++;
+  }
+
+  decrement() {
+    this.counter--;
   }
 }
 

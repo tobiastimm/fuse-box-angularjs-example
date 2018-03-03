@@ -48,7 +48,7 @@ context(
       const app = fuse.bundle("app");
       if (!this.isProduction) {
         app.watch();
-        app.hmr({ reload: true });
+        app.hmr();
       }
       app.instructions("> index.js");
       return app;
